@@ -95,7 +95,7 @@ module.exports = withMDX({
           destination: '/guides/updating-now-cli'
         },
         {
-          source: '/docs/guides/:path*',
+          source: '/docs/guides/(.*)',
           statusCode: 301,
           destination: '/guides'
         },
@@ -105,7 +105,7 @@ module.exports = withMDX({
           destination: '/docs/v1/getting-started/:path*'
         },
         {
-          source: '/docs/v2/getting-started/:path*',
+          source: '/docs/v2/getting-started/(.*)',
           statusCode: 301,
           destination: '/docs/v2/introduction'
         },
@@ -117,8 +117,7 @@ module.exports = withMDX({
             'https://github.com/zeit/now/blob/master/DEVELOPING_A_RUNTIME.md'
         },
         {
-          source:
-            '/docs/v2/deployments/((?:builders|official-builders))/:path*',
+          source: '/docs/v2/deployments/((?:builders|official-builders))/(.*)',
           statusCode: 301,
           destination: '/docs/runtimes'
         },
@@ -203,7 +202,7 @@ module.exports = withMDX({
           destination: '/docs/v2/platform/:path*'
         },
         {
-          source: '/docs/v2/development/basic/:path*',
+          source: '/docs/v2/development/basic/(.*)',
           statusCode: 301,
           destination:
             '/docs/v2/deployment/serverless-functions#local-development'
