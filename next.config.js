@@ -148,16 +148,6 @@ module.exports = withMDX({
           destination: '/docs/runtimes'
         },
         {
-          source: '/docs/v2/development/environment-variables(.*)',
-          statusCode: 301,
-          destination: '/docs/v2/serverless-functions/env-and-secrets'
-        },
-        {
-          source: '/docs/v2/development/(.*)',
-          statusCode: 301,
-          destination: '/docs/v2/serverless-functions/introduction'
-        },
-        {
           source: '/docs/v2/deployments/(.*)',
           statusCode: 301,
           destination: '/docs/v2/introduction'
@@ -178,16 +168,6 @@ module.exports = withMDX({
           destination: '/docs/v2/serverless-functions/edge-caching'
         },
         {
-          source: '/examples(.*)',
-          statusCode: 301,
-          destination: 'https://github.com/zeit/now-examples'
-        },
-        {
-          source: '/docs/v1/examples/(.*)',
-          statusCode: 301,
-          destination: 'https://github.com/zeit/now-examples'
-        },
-        {
           source: '/docs/other/:path*',
           statusCode: 301,
           destination: '/docs/v1/other/:path*'
@@ -201,6 +181,16 @@ module.exports = withMDX({
           source: '/examples/nodejs-express',
           statusCode: 301,
           destination: '/examples/express'
+        },
+        {
+          source: '/examples(.*)',
+          statusCode: 301,
+          destination: 'https://github.com/zeit/now-examples'
+        },
+        {
+          source: '/docs/v1/examples/(.*)',
+          statusCode: 301,
+          destination: 'https://github.com/zeit/now-examples'
         },
         {
           source: '/docs/v2/platform/global-configuration(.*)',
@@ -217,6 +207,16 @@ module.exports = withMDX({
           statusCode: 301,
           destination:
             '/docs/v2/deployment/serverless-functions#local-development'
+        },
+        {
+          source: '/docs/v2/development/environment-variables(.*)',
+          statusCode: 301,
+          destination: '/docs/v2/serverless-functions/env-and-secrets'
+        },
+        {
+          source: '/docs/v2/development/(.*)',
+          statusCode: 301,
+          destination: '/docs/v2/serverless-functions/introduction'
         },
         {
           source: '/docs/v2/integrations/:path*',
