@@ -16,8 +16,8 @@ const checks = [
     destination: '/docs/v2/network/status-codes'
   },
   {
-    source: '/docs/router-status/',
-    destination: '/docs/v2/network/status-codes'
+    source: '/docs/router-status/hello-world',
+    destination: '/docs/v2/network/status-codes#hello-world'
   },
   {
     source: '/docs/builders',
