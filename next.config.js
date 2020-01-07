@@ -15,6 +15,28 @@ module.exports = withMDX({
   experimental: {
     css: true,
 
+    rewrites() {
+      return [
+        {
+          source: '/:path*/',
+          destination: '/:path*'
+        },
+        // TODO: test out basePath to replace below rewrites
+        {
+          source: '/docs/sitemap.xml',
+          destination: '/sitemap.xml'
+        },
+        {
+          source: '/docs/_next(.*)',
+          destination: '/_next$1'
+        },
+        {
+          source: '/docs/static(.*)',
+          destination: '/static$1'
+        }
+      ]
+    },
+
     redirects() {
       return [
         {
