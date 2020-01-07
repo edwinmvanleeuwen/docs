@@ -12,10 +12,6 @@ const checks = [
     destination: '/docs/api'
   },
   {
-    source: '/docs/router-status/mycode',
-    destination: '/docs/v2/network/status-codes#mycode'
-  },
-  {
     source: '/docs/router-status',
     destination: '/docs/v2/network/status-codes'
   },

@@ -44,11 +44,12 @@ module.exports = withMDX({
           statusCode: 301,
           destination: '/docs/api'
         },
-        {
-          source: '/docs/router-status/:code',
-          statusCode: 301,
-          destination: '/docs/v2/network/status-codes#:code'
-        },
+        // TODO: re-migrate once the fix has landed in @now/routing-utils
+        // {
+        //   source: '/docs/router-status/:code',
+        //   statusCode: 301,
+        //   destination: '/docs/v2/network/status-codes#:code'
+        // },
         {
           source: '/docs/router-status(|/)',
           statusCode: 301,
