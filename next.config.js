@@ -36,8 +36,8 @@ module.exports = withMDX({
     redirects() {
       return [
         {
-          source: '/:path*/',
-          destination: '/:path*'
+          source: '/:path+/',
+          destination: '/:path+'
         },
         {
           source: '/api/(.*)',
