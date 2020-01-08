@@ -17,22 +17,18 @@ module.exports = withMDX({
 
     rewrites() {
       return [
-        {
-          source: '/:path*/',
-          destination: '/:path*'
-        },
         // TODO: test out basePath to replace below rewrites
         {
           source: '/docs/sitemap.xml',
           destination: '/sitemap.xml'
         },
         {
-          source: '/docs/_next(.*)',
-          destination: '/_next$1'
+          source: '/docs/_next/:path*',
+          destination: '/_next/:path*'
         },
         {
-          source: '/docs/static(.*)',
-          destination: '/static$1'
+          source: '/docs/static/:path*',
+          destination: '/static/:path*'
         }
       ]
     },
@@ -40,7 +36,11 @@ module.exports = withMDX({
     redirects() {
       return [
         {
-          source: '/api(.*)',
+          source: '/:path*/',
+          destination: '/:path*'
+        },
+        {
+          source: '/api/(.*)',
           statusCode: 301,
           destination: '/docs/api'
         },
@@ -51,7 +51,7 @@ module.exports = withMDX({
         //   destination: '/docs/v2/network/status-codes#:code'
         // },
         {
-          source: '/docs/router-status(|/)',
+          source: '/docs/router-status',
           statusCode: 301,
           destination: '/docs/v2/network/status-codes'
         },
@@ -91,7 +91,7 @@ module.exports = withMDX({
           destination: '/docs/v1/deployment-types/:path*'
         },
         {
-          source: '/docs/(|v1/)guides/updating-now-cli(|/)',
+          source: '/docs/(|v1/)guides/updating-now-cli',
           statusCode: 301,
           destination: '/guides/updating-now-cli'
         },
@@ -128,7 +128,7 @@ module.exports = withMDX({
           destination: '/docs/runtimes'
         },
         {
-          source: '/docs/v2/deployments/environment-variables-and-secrets(|/)',
+          source: '/docs/v2/deployments/environment-variables-and-secrets',
           statusCode: 301,
           destination: '/docs/v2/build-step'
         },
@@ -143,7 +143,7 @@ module.exports = withMDX({
           destination: '/docs/configuration#routes'
         },
         {
-          source: '/docs/v2/deployments/builds(|/)',
+          source: '/docs/v2/deployments/builds',
           statusCode: 301,
           destination: '/docs/runtimes'
         },
@@ -153,17 +153,17 @@ module.exports = withMDX({
           destination: '/docs/v2/introduction'
         },
         {
-          source: '/docs/v2/domains-and-aliases/aliasing-a-deployment(|/)',
+          source: '/docs/v2/domains-and-aliases/aliasing-a-deployment',
           statusCode: 301,
           destination: '/docs/v2/custom-domains#deploying-with-your-domain'
         },
         {
-          source: '/docs/v2/domains-and-aliases/aliasing-a-deployment(|/)',
+          source: '/docs/v2/domains-and-aliases/aliasing-a-deployment',
           statusCode: 301,
           destination: '/docs/v2/custom-domains#deploying-with-your-domain'
         },
         {
-          source: '/docs/v2/domains-and-aliases/cdn(|/)',
+          source: '/docs/v2/domains-and-aliases/cdn',
           statusCode: 301,
           destination: '/docs/v2/serverless-functions/edge-caching'
         },
